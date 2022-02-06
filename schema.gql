@@ -1,0 +1,16 @@
+type Mutation {
+  createTodo(completed: Boolean!, title: String!): [Todo!]!
+  toggleCompleted(id: Int!): Todo
+}
+
+type Query {
+  getTodo(id: Int): Todo
+  getTodos: [Todo!]!
+}
+
+"""This is a Todo object with ID, title and completed boolean!"""
+type Todo {
+  completed: Boolean!
+  id: Int!
+  title: String!
+}
